@@ -3,11 +3,11 @@ import matplotlib.pyplot as plt
 from budget import Expense
 
 
-expense = Expense.Expenses()
-read_expenses= expense.read_expenses('data/spending_data.csv')
-spending_categories=[]
+expenses = Expense.Expenses()
+expenses.read_expenses('data/spending_data.csv')
 
-for expense in expense.list:
+spending_categories=[]
+for expense in expenses.list:
     spending_categories.append(expense.category)
 
 spending_counter=collections.Counter(spending_categories)
@@ -22,4 +22,7 @@ ax.bar(categories, count)
 ax.set_title('# of Purchases by Category')
 
 plt.show()
+
+
+
 
