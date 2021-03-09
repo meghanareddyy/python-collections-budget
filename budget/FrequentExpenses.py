@@ -1,4 +1,6 @@
 import collections
+import matplotlib
+matplotlib.use('TkAgg')
 import matplotlib.pyplot as plt
 from budget import Expense
 
@@ -20,7 +22,6 @@ fig, ax = plt.subplots()
 
 ax.bar(categories, count)
 ax.set_title('# of Purchases by Category')
-
 plt.show()
 
 
